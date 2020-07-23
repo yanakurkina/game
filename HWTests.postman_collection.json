@@ -6,55 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "Create user",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "c8bb9198-dc14-4591-8f50-3e575f4a7a9b",
-						"exec": [
-							"pm.test(\"Status code is 500\", function () {\r",
-							"    pm.response.to.have.status(500);\r",
-							"});\r",
-							"pm.test(\"Your test name\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.message).to.eql(\"An error has occurred.\");\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"Login\": \"TestUser1112\",\r\n    \"NativeName\": \"Test User\",\r\n    \"Password\": \"123456\",\r\n    \"ConfirmPassword\": \"123456\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://104.40.150.146/api/user",
-					"protocol": "http",
-					"host": [
-						"104",
-						"40",
-						"150",
-						"146"
-					],
-					"path": [
-						"api",
-						"user"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Get token",
 			"event": [
 				{
@@ -87,7 +38,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "grant_type=password&username=TestUser1112&password=1234567"
+					"raw": "grant_type=password&username=TestUser1112&password=123456"
 				},
 				"url": {
 					"raw": "http://104.40.150.146/token",
