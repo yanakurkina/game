@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "4f9a79a8-2fb4-4031-8350-1878316903cf",
-		"name": "HW Tests",
+		"_postman_id": "a2401673-766a-4572-9049-7d1e92797a7b",
+		"name": "HW Tests Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c1a98bbf-5c49-4ffa-aa2d-447b3eeb6362",
+						"id": "0c4b3f97-b91e-4124-b517-5552ece2f34f",
 						"exec": [
 							"var jsonResp=pm.response.json();\r",
 							"postman.setGlobalVariable(\"token\",jsonResp[\"access_token\"]);"
@@ -38,7 +38,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "grant_type=password&username=TestUser1112&password=1234567"
+					"raw": "grant_type=password&username=TestUser1112&password=123456"
 				},
 				"url": {
 					"raw": "http://104.40.150.146/token",
@@ -62,7 +62,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "28dd991b-1395-47c2-a668-5a834ec34f01",
+						"id": "828c71d6-fb6f-472e-b306-ef46e1c4e099",
 						"exec": [
 							"pm.test(\"Status code name has string\", function () {\r",
 							"    pm.response.to.have.status(\"OK\");\r",
@@ -120,7 +120,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f67e9b84-c1eb-48bf-af4f-140ef2afe326",
+						"id": "46992460-9375-4d86-9a00-8a13b79b43f3",
 						"exec": [
 							"pm.test(\"Response time is less than 200ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
@@ -179,7 +179,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "bae52b99-e568-4382-8f42-7b857821636b",
+						"id": "34e17ece-8f85-4aaa-8eab-a2ddab1af54e",
 						"exec": [
 							"pm.test(\"Status code name has string\", function () {\r",
 							"    pm.response.to.have.status(\"OK\");\r",
@@ -204,7 +204,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"NativeName\": \"Test User\",\r\n  \"Role\": 1,\r\n  \"OldPassword\": \"1234567\",\r\n  \"Password\": \"123456\",\r\n  \"ConfirmPassword\": \"123456\"\r\n}",
+					"raw": "{\r\n  \"NativeName\": \"Test User\",\r\n  \"Role\": 1,\r\n  \"OldPassword\": \"123456\",\r\n  \"Password\": \"1234567\",\r\n  \"ConfirmPassword\": \"1234567\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -235,7 +235,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d9c8caf1-5324-4b29-9fb3-076b856e7972",
+						"id": "3c3372e4-5427-4616-9b4a-e4dbcb6b6fcd",
 						"exec": [
 							"pm.test(\"Successful POST request\", function () {\r",
 							"    pm.expect(pm.response.code).to.be.oneOf([200,202]);\r",
@@ -293,7 +293,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3a933e31-8d07-4f1a-8408-43e72e7b1fb6",
+						"id": "87a98d9b-eb7b-424b-9e3a-335b1215bac1",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -351,7 +351,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e1f0dc8d-5de2-46c1-906d-b0166519c471",
+						"id": "a2f24a42-247f-4141-a472-9e4fe6b42127",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -411,10 +411,10 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4986fd40-9f33-4a60-8fdc-e7fa360a265a",
+						"id": "03f86ec0-14e5-489b-8de6-09d504ef6e8d",
 						"exec": [
-							"pm.test(\"Response time is more than 200ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.above(150);\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -466,7 +466,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8f064b74-0e45-44c4-b790-fabab6560b85",
+						"id": "a7876826-fea0-41b5-9e18-1db274eaa908",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -534,7 +534,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "02b073b7-cfe4-4e41-ba92-0a0901156a51",
+						"id": "58aedae0-5991-40f3-814b-2d28d210938f",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -548,16 +548,6 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -611,7 +601,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "70b37965-ea4d-4fbb-b949-bced5d6caf32",
+				"id": "ffaf5211-c6b7-4cce-88e6-539d1dc22a73",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -621,7 +611,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "f4e0287a-5e78-4184-9932-6a27ae5d31e4",
+				"id": "80b9d8ee-7e7e-42fb-b24a-7e0b0547a87c",
 				"type": "text/javascript",
 				"exec": [
 					""
