@@ -38,7 +38,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "grant_type=password&username=TestUser1112&password=123456"
+					"raw": "grant_type=password&username=TestUser1112&password=1234567"
 				},
 				"url": {
 					"raw": "http://104.40.150.146/token",
@@ -204,7 +204,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"NativeName\": \"Test User\",\r\n  \"Role\": 1,\r\n  \"OldPassword\": \"123456\",\r\n  \"Password\": \"1234567\",\r\n  \"ConfirmPassword\": \"1234567\"\r\n}",
+					"raw": "{\r\n  \"NativeName\": \"Test User\",\r\n  \"Role\": 1,\r\n  \"OldPassword\": \"1234567\",\r\n  \"Password\": \"123456\",\r\n  \"ConfirmPassword\": \"123456\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -548,6 +548,16 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"body": {
