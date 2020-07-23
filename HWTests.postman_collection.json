@@ -38,7 +38,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "grant_type=password&username=TestUser1112&password=123456"
+					"raw": "grant_type=password&username=TestUser1112&password=1234567"
 				},
 				"url": {
 					"raw": "http://104.40.150.146/token",
@@ -413,7 +413,7 @@
 					"script": {
 						"id": "4986fd40-9f33-4a60-8fdc-e7fa360a265a",
 						"exec": [
-							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"pm.test(\"Response time is more than 200ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.above(150);\r",
 							"});"
 						],
